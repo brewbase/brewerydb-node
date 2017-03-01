@@ -4,6 +4,7 @@ var Search  = require('./lib/endpoints/search');
 var Category = require('./lib/endpoints/category');
 var Style = require('./lib/endpoints/style');
 var Fermentables = require('./lib/endpoints/fermentables');
+var Location = require('./lib/endpoints/location')
 var Config  = require('./config');
 
 function BreweryDB(key) {
@@ -15,6 +16,7 @@ function BreweryDB(key) {
     this.style = new Style(this.config);
     this.category = new Category(this.config);
     this.fermentables = new Fermentables(this.config);
+    this.location = new Location(this.config)
 }
 
 module.exports = BreweryDB;
